@@ -41,7 +41,7 @@ var initMap = function () {
     });
 
     var infowindow = new google.maps.InfoWindow({
-        content: '<h2>Piscina</h2><div><a href="#" onclick="return showMarkerInfo("pool");">Ver más</a></div>'
+        content: '<h2>Piscina</h2><div><a onclick="return showMarkerInfo("pool");">Ver más</a></div>'
     });
     markerPool.addListener('click', function() {
         infowindow.open(map, markerPool);
