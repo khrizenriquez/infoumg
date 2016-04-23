@@ -56,7 +56,7 @@ var initMap = function () {
 
 var loadGoogleMaps = function () {
     var container = '';
-    initMap();
+    //initMap();
 };
 
 document.addEventListener('DOMContentLoaded', function () {  });
