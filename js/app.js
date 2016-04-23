@@ -9,11 +9,11 @@ var showMarkerInfo = function (element) {
 };
 
 var initMap = function () {
-    let poolLatLng      = new google.maps.LatLng(14.659124, -90.512665);
-    let fieldLatLng     = new google.maps.LatLng(14.657474, -90.512412);
-    let cabinLatLng     = new google.maps.LatLng(14.657176, -90.513357);
-    let mapContainer    = document.getElementById('mapContainer');
-    let mapOptions      = {
+    var poolLatLng      = new google.maps.LatLng(14.659124, -90.512665);
+    var fieldLatLng     = new google.maps.LatLng(14.657474, -90.512412);
+    var cabinLatLng     = new google.maps.LatLng(14.657176, -90.513357);
+    var mapContainer    = document.getElementById('mapContainer');
+    var mapOptions      = {
         zoomControl: false,
         mapTypeControl: true,
         scaleControl: false,
@@ -25,24 +25,24 @@ var initMap = function () {
         zoom: 18
     };
     // Create a map object and specify the DOM element for display.
-    let map = new google.maps.Map(mapContainer, mapOptions);
+    var map = new google.maps.Map(mapContainer, mapOptions);
 
-    let markerPool = new google.maps.Marker({
+    var markerPool = new google.maps.Marker({
         position:   poolLatLng,
         title:      "Piscina"
     });
-    let markerField = new google.maps.Marker({
+    var markerField = new google.maps.Marker({
         position:   fieldLatLng,
         title:      "Campo"
     });
-    let markerCabin = new google.maps.Marker({
+    var markerCabin = new google.maps.Marker({
         position:   cabinLatLng,
         title:      "Cabañas"
     });
 
-    let infowindow = new google.maps.InfoWindow({
-        content: `<h2>Piscina</h2>
-                <div><a href="#" onclick="return showMarkerInfo('pool');">Ver más</a></div>`
+    var infowindow = new google.maps.InfoWindow({
+        content: '<h2>Piscina</h2>'+
+                '<div><a href="#" onclick="return showMarkerInfo("pool");">Ver más</a></div>'
     });
     markerPool.addListener('click', function() {
         infowindow.open(map, markerPool);
@@ -55,7 +55,7 @@ var initMap = function () {
 };
 
 var loadGoogleMaps = function () {
-    let container = '';
+    var container = '';
     initMap();
 };
 
