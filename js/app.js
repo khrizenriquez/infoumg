@@ -4,6 +4,10 @@
 
 'use strict';
 
+var showMarkerInfo = function (element) {
+    $('#mapOptions').modal('show');
+};
+
 var initMap = function () {
     let poolLatLng      = new google.maps.LatLng(14.659124, -90.512665);
     let fieldLatLng     = new google.maps.LatLng(14.657474, -90.512412);
@@ -34,6 +38,14 @@ var initMap = function () {
     let markerCabin = new google.maps.Marker({
         position:   cabinLatLng,
         title:      "Cabañas"
+    });
+
+    let infowindow = new google.maps.InfoWindow({
+        content: `<h2>Piscina</h2>
+                <div><a href="#" onclick="return showMarkerInfo('pool');">Ver más</a></div>`
+    });
+    markerPool.addListener('click', function() {
+        infowindow.open(map, markerPool);
     });
 
     // To add the marker to the map, call setMap();
