@@ -1,0 +1,22 @@
+/*
+*
+*/
+.absolute {
+    position: absolute;
+}
+.arrow-container {
+    margin-left: 4em;
+    position: absolute;
+    top: 0;
+}
+.relative {
+    position: relative;
+}
+.optionsContainer {
+    background: rgba(255, 255, 255, 0.5);
+    right: 80%;
+    -webkit-transition: all 0.25s ease;
+    -o-transition: all 0.25s ease;
+    transition: all 0.25s ease;
+    z-index: 10;
+}

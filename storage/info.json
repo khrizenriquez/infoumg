@@ -1,13 +1,68 @@
 [
     {
-        "name": "Baño",
-        "icon": "",
+        "name": "Cabañas",
+        "icon": "map-icon-store",
         "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
-        "active": true,
+        "isActive": true,
         "locations": [
             {
-                "latitude": "",
-                "longitude": ""
+                "latitude": "14.657176",
+                "longitude": "-90.513357"
+            }
+        ]
+    }, {
+        "name": "Piscina",
+        "icon": "map-icon-store",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+        "isActive": true,
+        "locations": [
+            {
+                "latitude": "14.657176",
+                "longitude": "-90.513357"
+            }
+        ]
+    }, {
+        "name": "Poes",
+        "icon": "map-icon-store",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+        "isActive": true,
+        "locations": [
+            {
+                "latitude": "14.657176",
+                "longitude": "-90.513357"
+            }
+        ]
+    }, {
+        "name": "Campo",
+        "icon": "map-icon-store",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+        "isActive": true,
+        "locations": [
+            {
+                "latitude": "14.657176",
+                "longitude": "-90.513357"
+            }
+        ]
+    }, {
+        "name": "Edificio A",
+        "icon": "map-icon-store",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+        "isActive": true,
+        "locations": [
+            {
+                "latitude": "14.657176",
+                "longitude": "-90.513357"
+            }
+        ]
+    }, {
+        "name": "Edificio L",
+        "icon": "map-icon-store",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+        "isActive": true,
+        "locations": [
+            {
+                "latitude": "14.657176",
+                "longitude": "-90.513357"
             }
         ]
     }

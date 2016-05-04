@@ -6,13 +6,22 @@
 
         <title>Información de la UMG</title>
 
+        <link rel="stylesheet" href="./css/map-icons.css" />
         <link rel="stylesheet" href="./css/vendor/pure_css/pure.css" />
         <link rel="stylesheet" href="./css/vendor/bootstrap/bootstrap.css" />
+        <link rel="stylesheet" href="./css/app.css">
 
         <style>
         #mapContainer {
             height: 600px;
             width: 100%;
+        }
+        .map-icon {
+        	font-size: 24px;
+        	color: #FFFFFF;
+        	line-height: 48px;
+        	text-align: center;
+        	white-space: nowrap;
         }
         </style>
     </head>
@@ -22,8 +31,13 @@
                 <li class="pure-menu-item pure-menu-selected"><a href="#" class="pure-menu-link">UMG</a></li>
             </ul>
         </div>
-        <div class="container-map">
-            <div class="optionsContainer"></div>
+        <div class="container-map relative">
+            <div class="optionsContainer absolute  pure-menu custom-restricted-width">
+                <span class="pure-menu-heading">Lugares <span class="arrow-container">></span></span>
+                <ul id="container-map-list-elements" class="pure-menu-list">
+                    <li class="pure-menu-item"><a href="#" class="pure-menu-link">Flickr</a></li>
+                </ul>
+            </div>
             <div id="mapContainer"></div>
         </div>
 
@@ -50,12 +64,13 @@
           </div><!-- /.modal-dialog -->
         </div><!-- /.modal -->
 
-        <script async defer
+        <script
           src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDbRQbY3vvMc3YnF94jjQrqE0VUTfvyB80">
         </script>
         <script   src="https://code.jquery.com/jquery-2.2.3.min.js"  integrity="sha256-a23g1Nt4dtEYOj7bR+vTu7+T8VP13humZFBJNIYoEJo="   crossorigin="anonymous"></script>
         <script src="./js/vendor/bootstrap/tether.min.js"></script>
         <script src="./js/vendor/bootstrap/bootstrap.min.js"></script>
+        <script src="./js/vendor/map-icons/map-icons.js"></script>
         <!-- <script src="https://maps.googleapis.com/maps/api/js?sensor=false" type="text/javascript"></script> -->
         <script src="./js/app.js"></script>
     </body>
