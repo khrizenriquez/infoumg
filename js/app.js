@@ -3,6 +3,19 @@
 */
 
 //'use strict';
+var map;
+var mapContainer    = document.getElementById('mapContainer');
+var mapOptions      = {
+    zoomControl: false,
+    mapTypeControl: true,
+    scaleControl: false,
+    streetViewControl: false,
+    rotateControl: false,
+    center: {
+        lat: 14.6586779, lng: -90.5133461
+    }, scrollwheel: false,
+    zoom: 18
+};
 
 var showMarkerInfo = function (element) {
     $('#mapOptions').modal('show');
@@ -33,21 +46,9 @@ var initMap = function () {
     var poolLatLng      = new google.maps.LatLng(14.659124, -90.512665);
     var fieldLatLng     = new google.maps.LatLng(14.657474, -90.512412);
     //var cabinLatLng     = new google.maps.LatLng(14.657176, -90.513357);
-    var mapContainer    = document.getElementById('mapContainer');
     var infoWindow = new google.maps.InfoWindow({map: map});
-    var mapOptions      = {
-        zoomControl: false,
-        mapTypeControl: true,
-        scaleControl: false,
-        streetViewControl: false,
-        rotateControl: false,
-        center: {
-            lat: 14.6586779, lng: -90.5133461
-        }, scrollwheel: false,
-        zoom: 18
-    };
     // Create a map object and specify the DOM element for display.
-    var map = new google.maps.Map(mapContainer, mapOptions);
+    map = new google.maps.Map(mapContainer, mapOptions);
 
     var markerPool = new google.maps.Marker({
         position:   poolLatLng,
@@ -57,18 +58,18 @@ var initMap = function () {
         position:   fieldLatLng,
         title:      "Campo"
     });
-    var markerCabin = new Marker({
-        map:        map,
-        position:   new google.maps.LatLng(14.657176, -90.513357),
-        title:      "Cabañas",
-        icon: {
-            path: MAP_PIN,
-    		fillColor: '#00CCBB',
-    		fillOpacity: 1,
-    		strokeColor: '#000',
-    		strokeWeight: 1
-        }, map_icon_label: '<span class="map-icon map-icon-store"></span>'
-    });
+    // var markerCabin = new Marker({
+    //     map:        map,
+    //     position:   new google.maps.LatLng(14.657176, -90.513357),
+    //     title:      "Cabañas",
+    //     icon: {
+    //         path: MAP_PIN,
+    // 		fillColor: '#00CCBB',
+    // 		fillOpacity: 1,
+    // 		strokeColor: '#000',
+    // 		strokeWeight: 1
+    //     }, map_icon_label: '<span class="map-icon map-icon-store"></span>'
+    // });
 
     var infowindow = new google.maps.InfoWindow({
         content: '<h2>Piscina</h2><div><a onclick="return showMarkerInfo(1);">Ver más</a></div>'
@@ -78,10 +79,9 @@ var initMap = function () {
     });
 
     // To add the marker to the map, call setMap();
-    markerPool.setMap(map);
-    markerField.setMap(map);
+    //markerPool.setMap(map);
+    //markerField.setMap(map);
     //markerCabin.setMap(map);
-
 
     // if (navigator.geolocation) {
     //     navigator.geolocation.getCurrentPosition(function(position) {
@@ -114,6 +114,32 @@ var loadGoogleMaps = function () {
     initMap();
 };
 
+var drawMarker = function (map, obj) {};
+var drawMarkers = function (map, arrObj) {
+    var m = map || new google.maps.Map(mapContainer, mapOptions);
+    var data = arrObj || [];
+
+    data.some(function (element, index, arr) {
+        if (element.isActive) {
+            element.locations.some(function (el, ind, ar) {
+                console.log(el);
+                new Marker({
+                    map:        map,
+                    position:   new google.maps.LatLng(Number(el.latitude), Number(el.longitude)),
+                    title:      element.name,
+                    icon: {
+                        path: MAP_PIN,
+                		fillColor: '#00CCBB',
+                		fillOpacity: 1,
+                		strokeColor: '#000',
+                		strokeWeight: 1
+                    }, map_icon_label: '<span class="map-icon '+ element.icon +'"></span>'
+                });
+            });
+        }
+    });
+};
+
 var fillMapOptions = function () {
     var xhr         = new XMLHttpRequest();
     var container   = document.querySelector('.container-map .optionsContainer #container-map-list-elements');
@@ -123,7 +149,6 @@ var fillMapOptions = function () {
             container.innerHTML = '';
 
             response.some(function (element, index, arr) {
-                console.log(element.isActive);
                 if (element.isActive) {
                     container.innerHTML += "<li class='pure-menu-item'><label for='element-"+
                     index
@@ -135,16 +160,17 @@ var fillMapOptions = function () {
                     +"</label></li>";
                 }
             });
+
+            drawMarkers(map, response);
         }
     };
     xhr.open('GET', 'storage/info.json', true);
     xhr.send(null);
 };
 
-document.addEventListener('DOMContentLoaded', function () {
-    fillMapOptions();
-});
+document.addEventListener('DOMContentLoaded', function () {  });
 
 window.onload = function() {
     loadGoogleMaps();
+    fillMapOptions();
 };
