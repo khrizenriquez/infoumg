@@ -31,9 +31,6 @@
     #CustomLog logs/deflate_log DEFLATE
 </IfModule>
 
-Header unset Pragma
-FileETag None
-Header unset ETag
 
 ## EXPIRES CACHING ##
 <IfModule mod_expires.c>
