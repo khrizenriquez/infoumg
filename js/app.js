@@ -4,6 +4,9 @@
 
 //'use strict';
 var map, myPosition, watchID, geoLoc;
+var placesArr = [],
+    mapMarkers = [];
+var menuArrow = 'left';
 var mapContainer    = document.getElementById('mapContainer');
 var mapOptions      = {
     zoomControl: false,
@@ -18,7 +21,23 @@ var mapOptions      = {
 };
 
 var showMarkerInfo = function (element) {
-    $('#mapOptions').modal('show');
+    var elementName = element.parentNode.parentNode.children[0].innerText;
+    var umgPlace    = elementName.replace('Información de ', '');
+    var title   = document.querySelector('#mapOptions .modal-title');
+    var content = document.querySelector('#mapOptions .modal-body');
+
+    title.innerHTML     = '';
+    content.innerHTML   = '';
+
+    placesArr.some(function (element, index, arr) {
+        if (element.name === umgPlace) {
+            title.innerHTML     = elementName;
+            content.innerHTML   = element.description;
+
+            $('#mapOptions').modal('show');
+            return false;
+        }
+    });
 };
 
 // var options = {
@@ -41,26 +60,6 @@ var showMarkerInfo = function (element) {
 // };
 //
 // navigator.geolocation.getCurrentPosition(success, error, options);
-
-var drawClientLocation = function (mapContainer, userValue) {
-    if (userValue === undefined) {
-        myPosition = new Marker({
-            map:        map,
-            position:   new google.maps.LatLng(position.coords.latitude, position.coords.longitude),
-            title:      "Este eres tú",
-            icon: {
-                path:             SQUARE_PIN,
-                fillColor:        '#00CCBB',
-                fillOpacity:      1,
-                strokeColor:      '#000',
-                strokeWeight:     1
-            }, map_icon_label:    '<span class="map-icon map-icon-library"></span>'
-        });
-    } else {
-        myPosition.setPosition(position.coords.latitude, position.coords.longitude);
-    }
-    map.setCenter(pos);
-};
 
 function showLocation(position) {
     var latitude = position.coords.latitude;
@@ -98,16 +97,16 @@ var getLocationUpdate = function (map) {
                    title:      "Este eres tú",
                    icon: {
                        path:             SQUARE_PIN,
-                       fillColor:        '#00CCBB',
+                       fillColor:        '#000',
                        fillOpacity:      1,
                        strokeColor:      '#000',
                        strokeWeight:     1
                    }, map_icon_label:    '<span class="map-icon map-icon-library"></span>'
                });
+               //map.setCenter(pos);
            } else {
                myPosition.setPosition(new google.maps.LatLng(latitude, longitude));
            }
-           map.setCenter(pos);
        }, errorHandler, options);
     }
     else{
@@ -118,74 +117,18 @@ var getLocationUpdate = function (map) {
 
 
 var initMap = function () {
-    var poolLatLng      = new google.maps.LatLng(14.659124, -90.512665);
-    var fieldLatLng     = new google.maps.LatLng(14.657474, -90.512412);
-    //var cabinLatLng     = new google.maps.LatLng(14.657176, -90.513357);
-    var infoWindow = new google.maps.InfoWindow({map: map});
     // Create a map object and specify the DOM element for display.
     map = new google.maps.Map(mapContainer, mapOptions);
-
-    var markerPool = new google.maps.Marker({
-        position:   poolLatLng,
-        title:      "Piscina"
-    });
-    var markerField = new google.maps.Marker({
-        position:   fieldLatLng,
-        title:      "Campo"
-    });
-    // var markerCabin = new Marker({
-    //     map:        map,
-    //     position:   new google.maps.LatLng(14.657176, -90.513357),
-    //     title:      "Cabañas",
-    //     icon: {
-    //         path: MAP_PIN,
-    // 		fillColor: '#00CCBB',
-    // 		fillOpacity: 1,
-    // 		strokeColor: '#000',
-    // 		strokeWeight: 1
-    //     }, map_icon_label: '<span class="map-icon map-icon-store"></span>'
-    // });
 
     var infowindow = new google.maps.InfoWindow({
         content: '<h2>Piscina</h2><div><a onclick="return showMarkerInfo(1);">Ver más</a></div>'
     });
-    markerPool.addListener('click', function() {
-        infowindow.open(map, markerPool);
-    });
+    //markerPool.addListener('click', function() {
+    //    infowindow.open(map, markerPool);
+    //});
 
     getLocationUpdate(map);
-
-    // if (navigator.geolocation) {
-    //     navigator.geolocation.watchPosition(function (position) {
-    //         console.log(position.coords);
-    //     });
-    //
-    //     navigator.geolocation.getCurrentPosition(function(position) {
-    //         //setInterval(function () {
-    //         var pos = {
-    //             lat: position.coords.latitude,
-    //             lng: position.coords.longitude
-    //         };
-    //             console.log(position.coords);
-    //         //}, 1000);
-    //
-    //         //drawClientLocation(map, myPosition, pos);
-    //     }, function() {
-    //         console.log('No compartio su ubicación');
-    //     });
-    //
-    // } else {
-    //     // Browser doesn't support Geolocation
-    //     alert('Tú navegador no soporta la funcionalidad de geolocalización');
-    // }
 };
-
-function handleLocationError(browserHasGeolocation, infoWindow, pos) {
-    infoWindow.setPosition(pos);
-    infoWindow.setContent(browserHasGeolocation ?
-                        'Error: The Geolocation service failed.' :
-                        'Error: Your browser doesn\'t support geolocation.');
-}
 
 var loadGoogleMaps = function () {
     var container = '';
@@ -193,26 +136,48 @@ var loadGoogleMaps = function () {
 };
 
 var drawMarker = function (map, obj) {};
-var drawMarkers = function (map, arrObj) {
+var drawMarkers = function (map, arrObj, umgPlaces) {
+    var places = umgPlaces || [];
+
+    if (places === []) return;
+
+    //  Elimino todos los marcadores
+    mapMarkers.some(function (el, ind, ar) {el.setMap()});
+
     var m = map || new google.maps.Map(mapContainer, mapOptions);
     var data = arrObj || [];
 
     data.some(function (element, index, arr) {
         if (element.isActive) {
-            element.locations.some(function (el, ind, ar) {
-                console.log(el);
-                new Marker({
-                    map:        map,
-                    position:   new google.maps.LatLng(Number(el.latitude), Number(el.longitude)),
-                    title:      element.name,
-                    icon: {
-                        path: MAP_PIN,
-                		fillColor: '#00CCBB',
-                		fillOpacity: 1,
-                		strokeColor: '#000',
-                		strokeWeight: 1
-                    }, map_icon_label: '<span class="map-icon '+ element.icon +'"></span>'
-                });
+            umgPlaces.some(function (umgElement, umgIndex, umgArr) {
+                if (umgElement === element.name) {
+                    element.locations.some(function (el, ind, ar) {
+                        var m = new Marker({
+                            map:        map,
+                            position:   new google.maps.LatLng(Number(el.latitude), Number(el.longitude)),
+                            title:      element.name,
+                            icon: {
+                                path: MAP_PIN,
+                                fillColor: '#00CCBB',
+                                fillOpacity: 1,
+                                strokeColor: '#000',
+                                strokeWeight: 1
+                            }, map_icon_label: '<span class="map-icon '+ element.icon +'"></span>'
+                        });
+                        mapMarkers.push(m);
+
+                        var infowindow = new google.maps.InfoWindow({
+                            content: '<h2>Información de '
+                            + element.name +
+                            '</h2><div><a onclick="return showMarkerInfo(this);">Ver más</a></div>'
+                        });
+                        m.addListener('click', function() {
+                            infowindow.open(map, m);
+                        });
+                    });
+
+                    return false;
+                }
             });
         }
     });
@@ -223,30 +188,71 @@ var fillMapOptions = function () {
     var container   = document.querySelector('.container-map .optionsContainer #container-map-list-elements');
     xhr.onreadystatechange = function() {
         if (xhr.readyState == XMLHttpRequest.DONE) {
-            var response    = JSON.parse(xhr.responseText);
+            placesArr = JSON.parse(xhr.responseText);
             container.innerHTML = '';
 
-            response.some(function (element, index, arr) {
+            placesArr.some(function (element, index, arr) {
                 if (element.isActive) {
-                    container.innerHTML += "<li class='pure-menu-item'><label for='element-"+
+                    container.innerHTML += "<li class='pure-menu-item white'><label for='element-"+
                     index
                     +"'><input id='element-"+
                     index
-                    +"' type='checkbox' value='1' /> "+
+                    +"' type='checkbox' name='umg-places-list' value='"+ element.name +"' /> "+
                     "<span class='map-icon "+ element.icon +"'></span>" +
                     element.name
                     +"</label></li>";
                 }
             });
 
-            drawMarkers(map, response);
+            document.querySelector("#container-map-list-elements").addEventListener('change', function (evt) {
+                evt.stopPropagation();
+                evt.preventDefault();
+                console.log(evt.target);
+                var placesSelected = [];
+                var chkArr = document.getElementsByName("umg-places-list");
+                for (k = 0; k< chkArr.length; k++) {
+                    if (chkArr[k].checked) {
+                        placesSelected.push(chkArr[k].value);
+                        console.log(chkArr[k].value);
+                    }
+                    //console.log(chkArr[k].checked);
+                }
+
+                drawMarkers(map, placesArr, placesSelected);
+            });
+
+            //drawMarkers(map, placesArr, 's');
         }
     };
     xhr.open('GET', 'storage/info.json', true);
     xhr.send(null);
 };
 
-document.addEventListener('DOMContentLoaded', function () {  });
+document.addEventListener('DOMContentLoaded', function () {
+    document.querySelector('.arrow-container').addEventListener('click', function (evt) {
+        var opContainer = document.querySelector('.optionsContainer');
+        if (menuArrow == 'left') {
+            menuArrow = 'right';
+            this.classList.remove("arrow-container-left-side");
+            this.classList.add("arrow-container-right-side");
+            opContainer.classList.remove("arrow-container-hide");
+            opContainer.classList.add("arrow-container-show");
+            //console.log(this);
+
+            return;
+        } else
+        if (menuArrow == 'right') {
+            menuArrow = 'left';
+            //console.log(this);
+            this.classList.remove("arrow-container-right-side");
+            this.classList.add("arrow-container-left-side");
+            opContainer.classList.remove("arrow-container-show");
+            opContainer.classList.add("arrow-container-hide");
+
+            return;
+        }
+    });
+});
 
 window.onload = function() {
     loadGoogleMaps();

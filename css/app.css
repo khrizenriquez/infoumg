@@ -1,22 +1,132 @@
 /*
 *
+*    References:
+*                http://codepen.io/metagrapher/pen/tgcLl
 */
+
+body {
+  animation: colorchange 50s; /* animation-name followed by duration in seconds*/
+     /* you could also use milliseconds (ms) or something like 2.5s */
+  -webkit-animation: colorchange 50s; /* Chrome and Safari */
+}
+
+@keyframes colorchange
+{
+  0%   {background: #1abc9c;}
+  10%  {background: #2ecc71;}
+  20%  {background: #3498db;}
+  30%  {background: #9b59b6;}
+  40% {background: #34495e;}
+  50% {background: #f1c40f;}
+  60% {background: #e67e22;}
+  70% {background: #e74c3c;}
+  80% {background: #ecf0f1;}
+  90% {background: #95a5a6;}
+}
+
+@-webkit-keyframes colorchange /* Safari and Chrome - necessary duplicate */
+{
+  0%   {background: #1abc9c;}
+  10%  {background: #2ecc71;}
+  20%  {background: #3498db;}
+  30%  {background: #9b59b6;}
+  40% {background: #34495e;}
+  50% {background: #f1c40f;}
+  60% {background: #e67e22;}
+  70% {background: #e74c3c;}
+  80% {background: #ecf0f1;}
+  90% {background: #95a5a6;}
+}
+
+
 .absolute {
     position: absolute;
 }
 .arrow-container {
-    margin-left: 4em;
+    left: -0.5em;
     position: absolute;
-    top: 0;
+    font-size: 4em;
+    width: 0;
+	height: 0;
+}
+.arrow-container-left-side {
+    border-top: 0.4em solid transparent;
+	border-bottom: 0.4em solid transparent;
+	border-right:0.4em solid #fff;
+    transition: all 0.2s ease;
+}
+.arrow-container-right-side {
+    border-top: 0.4em solid transparent;
+	border-bottom: 0.4em solid transparent;
+	border-left: 0.4em solid #fff;
+    transition: all 0.2s ease;
+}
+.arrow-container-show {
+    left: 70%;
+}
+.arrow-container-hide {
+    left: 100%;
+}
+.map-icon {
+    font-size: 24px;
+    line-height: 48px;
+    text-align: center;
+    white-space: nowrap;
+}
+.pure-menu-heading {
+    color: white;
+    font-size: 1.5em;
 }
 .relative {
     position: relative;
 }
 .optionsContainer {
-    background: rgba(255, 255, 255, 0.5);
-    right: 80%;
-    -webkit-transition: all 0.25s ease;
-    -o-transition: all 0.25s ease;
-    transition: all 0.25s ease;
+    background: rgba(44, 62, 80, 0.5);
+    font-size: 1.2em;
+    margin-top: 1em;
+    -webkit-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    -ms-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    transition: all 0.5s ease;
     z-index: 10;
 }
+.optionsContainer:hover {
+    background: rgba(44, 62, 80, 1);
+    cursor: pointer;
+    -webkit-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    -ms-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+}
+.optionsContainer li {
+    padding: 0em 1em;
+}
+.optionsContainer li label {
+    cursor: pointer;
+    width: 100%;
+}
+.optionsContainer li:hover {
+    background: rgba(255, 255, 255, 1);
+    color: black;
+}
+.white {
+    color: white;
+}
+
+#mapContainer {
+    height: 100%;
+    width: 100%;
+    top: 3em;
+}
+
+/*    Media queries*/
+/*    small*/
+@media screen and (max-width: 39.9375em) {
+    .arrow-container-show {
+        left: 40%;
+    }
+}
+/*    medium*/
+@media screen and (min-width: 39.9375em) and (max-width: 63.9375em) {}

@@ -11,19 +11,6 @@
         <link rel="stylesheet" href="./css/vendor/bootstrap/bootstrap.css" />
         <link rel="stylesheet" href="./css/app.css">
 
-        <style>
-        #mapContainer {
-            height: 600px;
-            width: 100%;
-        }
-        .map-icon {
-        	font-size: 24px;
-        	color: #FFFFFF;
-        	line-height: 48px;
-        	text-align: center;
-        	white-space: nowrap;
-        }
-        </style>
     </head>
     <body>
         <div class="pure-menu pure-menu-horizontal">
@@ -31,14 +18,14 @@
                 <li class="pure-menu-item pure-menu-selected"><a href="#" class="pure-menu-link">UMG</a></li>
             </ul>
         </div>
-        <div class="container-map relative">
-            <div class="optionsContainer absolute  pure-menu custom-restricted-width">
-                <span class="pure-menu-heading">Lugares <span class="arrow-container">></span></span>
+        <div class="container-map ">
+            <div class="optionsContainer arrow-container-hide relative pure-menu custom-restricted-width">
+                <span class="arrow-container arrow-container-left-side"></span><span class="pure-menu-heading">Lugares</span>
                 <ul id="container-map-list-elements" class="pure-menu-list">
-                    <li class="pure-menu-item"><a href="#" class="pure-menu-link">Flickr</a></li>
+                    <li class="pure-menu-item"><a href="#" class="pure-menu-link">Info UMG</a></li>
                 </ul>
             </div>
-            <div id="mapContainer"></div>
+            <div id="mapContainer" class="absolute"></div>
         </div>
 
         <div id="mapOptions" class="modal fade">
