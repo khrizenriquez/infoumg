@@ -3,7 +3,7 @@
 */
 
 //'use strict';
-var map;
+var map, myPosition, watchID, geoLoc;
 var mapContainer    = document.getElementById('mapContainer');
 var mapOptions      = {
     zoomControl: false,
@@ -42,6 +42,81 @@ var showMarkerInfo = function (element) {
 //
 // navigator.geolocation.getCurrentPosition(success, error, options);
 
+var drawClientLocation = function (mapContainer, userValue) {
+    if (userValue === undefined) {
+        myPosition = new Marker({
+            map:        map,
+            position:   new google.maps.LatLng(position.coords.latitude, position.coords.longitude),
+            title:      "Este eres tú",
+            icon: {
+                path:             SQUARE_PIN,
+                fillColor:        '#00CCBB',
+                fillOpacity:      1,
+                strokeColor:      '#000',
+                strokeWeight:     1
+            }, map_icon_label:    '<span class="map-icon map-icon-library"></span>'
+        });
+    } else {
+        myPosition.setPosition(position.coords.latitude, position.coords.longitude);
+    }
+    map.setCenter(pos);
+};
+
+function showLocation(position) {
+    var latitude = position.coords.latitude;
+    var longitude = position.coords.longitude;
+    console.log("Latitude : " + latitude + " Longitude: " + longitude);
+}
+
+function errorHandler(err) {
+    if(err.code == 1) {
+       console.log("Error: Access is denied!");
+    }
+
+    else if( err.code == 2) {
+       console.log("Error: Position is unavailable!");
+    }
+}
+
+var getLocationUpdate = function (map) {
+    if(navigator.geolocation){
+       // timeout at 60000 milliseconds (60 seconds)
+       var options = {timeout:60000};
+       geoLoc = navigator.geolocation;
+       watchID = geoLoc.watchPosition(function (position) {
+           var latitude = position.coords.latitude;
+           var longitude = position.coords.longitude;
+           var pos = {
+               lat: position.coords.latitude,
+               lng: position.coords.longitude
+           };
+           console.log("Latitude : " + latitude + " Longitude: " + longitude);
+           if (myPosition === undefined) {
+               myPosition = new Marker({
+                   map:        map,
+                   position:   new google.maps.LatLng(latitude, longitude),
+                   title:      "Este eres tú",
+                   icon: {
+                       path:             SQUARE_PIN,
+                       fillColor:        '#00CCBB',
+                       fillOpacity:      1,
+                       strokeColor:      '#000',
+                       strokeWeight:     1
+                   }, map_icon_label:    '<span class="map-icon map-icon-library"></span>'
+               });
+           } else {
+               myPosition.setPosition(new google.maps.LatLng(latitude, longitude));
+           }
+           map.setCenter(pos);
+       }, errorHandler, options);
+    }
+    else{
+       console.log("Sorry, browser does not support geolocation!");
+    }
+}
+
+
+
 var initMap = function () {
     var poolLatLng      = new google.maps.LatLng(14.659124, -90.512665);
     var fieldLatLng     = new google.maps.LatLng(14.657474, -90.512412);
@@ -78,33 +153,31 @@ var initMap = function () {
         infowindow.open(map, markerPool);
     });
 
-    if (navigator.geolocation) {
-        navigator.geolocation.getCurrentPosition(function(position) {
-            var pos = {
-                lat: position.coords.latitude,
-                lng: position.coords.longitude
-            };
+    getLocationUpdate(map);
 
-            new Marker({
-                map:        map,
-                position:   new google.maps.LatLng(position.coords.latitude, position.coords.longitude),
-                title:      "Cabañas",
-                icon: {
-                    path: MAP_PIN,
-            		fillColor: '#00CCBB',
-            		fillOpacity: 1,
-            		strokeColor: '#000',
-            		strokeWeight: 1
-                }, map_icon_label: '<span class="map-icon map-icon-store"></span>'
-            });
-            //map.setCenter(pos);
-        }, function() {
-            console.log('No compartio su ubicación');
-        });
-    } else {
-        // Browser doesn't support Geolocation
-        alert('Tú navegador no soporta la funcionalidad de geolocalización');
-    }
+    // if (navigator.geolocation) {
+    //     navigator.geolocation.watchPosition(function (position) {
+    //         console.log(position.coords);
+    //     });
+    //
+    //     navigator.geolocation.getCurrentPosition(function(position) {
+    //         //setInterval(function () {
+    //         var pos = {
+    //             lat: position.coords.latitude,
+    //             lng: position.coords.longitude
+    //         };
+    //             console.log(position.coords);
+    //         //}, 1000);
+    //
+    //         //drawClientLocation(map, myPosition, pos);
+    //     }, function() {
+    //         console.log('No compartio su ubicación');
+    //     });
+    //
+    // } else {
+    //     // Browser doesn't support Geolocation
+    //     alert('Tú navegador no soporta la funcionalidad de geolocalización');
+    // }
 };
 
 function handleLocationError(browserHasGeolocation, infoWindow, pos) {
