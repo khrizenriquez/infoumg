@@ -78,28 +78,33 @@ var initMap = function () {
         infowindow.open(map, markerPool);
     });
 
-    // To add the marker to the map, call setMap();
-    //markerPool.setMap(map);
-    //markerField.setMap(map);
-    //markerCabin.setMap(map);
+    if (navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition(function(position) {
+            var pos = {
+                lat: position.coords.latitude,
+                lng: position.coords.longitude
+            };
 
-    // if (navigator.geolocation) {
-    //     navigator.geolocation.getCurrentPosition(function(position) {
-    //       var pos = {
-    //         lat: position.coords.latitude,
-    //         lng: position.coords.longitude
-    //       };
-    //
-    //       infoWindow.setPosition(pos);
-    //       infoWindow.setContent('Location found.');
-    //       map.setCenter(pos);
-    //     }, function() {
-    //       handleLocationError(true, infoWindow, map.getCenter());
-    //     });
-    //   } else {
-    //     // Browser doesn't support Geolocation
-    //     handleLocationError(false, infoWindow, map.getCenter());
-    //   }
+            new Marker({
+                map:        map,
+                position:   new google.maps.LatLng(position.coords.latitude, position.coords.longitude),
+                title:      "Cabañas",
+                icon: {
+                    path: MAP_PIN,
+            		fillColor: '#00CCBB',
+            		fillOpacity: 1,
+            		strokeColor: '#000',
+            		strokeWeight: 1
+                }, map_icon_label: '<span class="map-icon map-icon-store"></span>'
+            });
+            //map.setCenter(pos);
+        }, function() {
+            console.log('No compartio su ubicación');
+        });
+    } else {
+        // Browser doesn't support Geolocation
+        alert('Tú navegador no soporta la funcionalidad de geolocalización');
+    }
 };
 
 function handleLocationError(browserHasGeolocation, infoWindow, pos) {
