@@ -1,8 +1,9 @@
 [
     {
         "name": "Cabañas",
+        "image": "./img/markers/cabañas.jpeg",
         "icon": "map-icon-store",
-        "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+        "description": "<div>Son salones de clase</div>",
         "isActive": true,
         "locations": [
             {
@@ -15,88 +16,104 @@
                 "latitude": "14.656625",
                 "longitude": "-90.512697"
             }
-        ]
+        ], "marker": "MAP_PIN",
+        "fillColor": "#00CCBB"
     }, {
         "name": "Piscina",
+        "image": "./img/markers/piscina.jpeg",
         "icon": "map-icon-swimming",
-        "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+        "description": "",
         "isActive": true,
         "locations": [
             {
                 "latitude": "14.659124",
                 "longitude": "-90.512665"
             }
-        ]
+        ], "marker": "MAP_PIN",
+        "fillColor": "#3498db"
     }, {
         "name": "Poes",
+        "image": "./img/markers/poes.jpeg",
         "icon": "map-icon-store",
-        "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+        "description": "Oficina que se encarga de realizar las evaluaciones de admisión a la universidad, evaluaciones a personal docente y atención a los diferentes establecimientos educativos de enseñanza media y tour a la universidad, además de dar la información de las carreras de la umg, realiza ferias estudiantiles (lunes a viernes de 08:00am a 08:00pm / sábados de 09:00am a 12:00pm)",
         "isActive": true,
         "locations": [
             {
-                "latitude": "14.658152",
-                "longitude": "-90.513432"
+                "latitude": "14.658321",
+                "longitude": "-90.513414"
             }
-        ]
+        ], "marker": "MAP_PIN",
+        "fillColor": "#00CCBB"
     }, {
         "name": "Campo",
-        "icon": "map-icon-store",
-        "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+        "image": "./img/markers/campo.jpeg",
+        "icon": "map-icon-walking",
+        "description": "",
         "isActive": true,
         "locations": [
             {
                 "latitude": "14.657474",
                 "longitude": "-90.512412"
             }
-        ]
+        ], "marker": "MAP_PIN",
+        "fillColor": "#27ae60"
     }, {
         "name": "Edificio A",
+        "image": "./img/markers/edificio_a.jpeg",
         "icon": "map-icon-city-hall",
-        "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+        "description": "",
         "isActive": true,
         "locations": [
             {
                 "latitude": "14.658278",
                 "longitude": "-90.513453"
             }
-        ]
+        ], "marker": "MAP_PIN",
+        "fillColor": "#bdc3c7"
     }, {
         "name": "Edificio I",
+        "image": "",
         "icon": "map-icon-city-hall",
-        "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+        "description": "",
         "isActive": true,
         "locations": [
             {
                 "latitude": "14.658011",
                 "longitude": "-90.513287"
             }
-        ]
+        ], "marker": "MAP_PIN",
+        "fillColor": "#00CCBB"
     }, {
         "name": "Edificio L",
+        "image": "./img/markers/edificio_l.jpeg",
         "icon": "map-icon-city-hall",
-        "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+        "description": "",
         "isActive": true,
         "locations": [
             {
                 "latitude": "14.657638",
                 "longitude": "-90.512785"
             }
-        ]
+        ], "marker": "MAP_PIN",
+        "fillColor": "#00CCBB"
     }, {
         "name": "Edificio T",
+        "image": "./img/markers/edificio_t.jpeg",
         "icon": "map-icon-city-hall",
-        "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+        "description": "",
         "isActive": true,
         "locations": [
             {
                 "latitude": "14.657174",
                 "longitude": "-90.512030"
             }
-        ]
+        ], "marker": "MAP_PIN",
+        "fillColor": "#00CCBB"
     }, {
         "name": "Cafetería",
+        "image": "./img/markers/cafeteria.jpeg",
         "icon": "map-icon-restaurant",
-        "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+        "description": "<div>Cafetería central:<ul><li>-La kafe</li><li>-Antojitos</li><li>-Subway</li><li>-Al macarone</li></ul></div><div>Cafetería campus de postgrados</div><div>Cafetería edificio T</div><div>Cafetería anexo medicina</div>",
         "isActive": true,
         "locations": [
             {
@@ -109,33 +126,39 @@
                 "latitude": "14.656304",
                 "longitude": "-90.513725"
             }
-        ]
+        ], "marker": "MAP_PIN",
+        "fillColor": "#e67e22"
     }, {
         "name": "Banco",
+        "image": "./img/markers/banco.jpeg",
         "icon": "map-icon-bank",
-        "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+        "description": "<div>Agencia banco industrial <strong>(lunes a viernes de 08:00am a 08:00pm / sábados 08:00am a 02:00pm)</strong></div>",
         "isActive": true,
         "locations": [
             {
                 "latitude": "14.658107",
                 "longitude": "-90.513627"
             }
-        ]
+        ], "marker": "MAP_PIN",
+        "fillColor": "#34495e"
     }, {
-        "name": "Auditorium",
-        "icon": "map-icon-bank",
-        "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+        "name": "Aula magna",
+        "image": "./img/markers/aula_magna.jpeg",
+        "icon": "map-icon-museum",
+        "description": "Se realizan diferentes eventos como graduaciones, conferencias, congresos y diferentes actividades.",
         "isActive": true,
         "locations": [
             {
                 "latitude": "14.658564",
                 "longitude": "-90.513211"
             }
-        ]
+        ], "marker": "MAP_PIN",
+        "fillColor": "#f39c12"
     }, {
         "name": "Parqueos",
-        "icon": "map-icon-bank",
-        "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+        "image": "./img/markers/parqueo.jpeg",
+        "icon": "map-icon-parking",
+        "description": "<div><p><strong>Automóviles y Motocicletas</strong></p><h3>Renovación de Derecho de Parqueo<br>Primer Semestre 2016</h3><p><strong>Aplican: Licenciaturas, Maestrías, Doctorados.</strong></p><p>Podrá renovar derecho de parqueo todo alumno que haya cancelado el semestre anterior y deberá estar debidamente <strong>asignado en el semestre actual</strong>.</p><p>Deberá realizar el pago en línea del <strong>04 al 30 de enero</strong> con los bancos:</p><ul><li>Banco Industrial (BI)</li><li>Banco G&amp;T</li><li>Banco Agricola Mercantil (BAM)</li></ul><p><strong>Imprimir y guardar documento de pago</strong><br><strong>Nota:</strong><br>En caso de no realizar el pago en línea, puede presentarse a nuestras oficinas de Servicios de Servicios Administrativos <strong>se cobrará Q25.00</strong> por la boleta.<strong>Estudiantes asignados en diferentes jornadas</strong></p><ol><li>Realizar el <strong>pago de parqueo de una jornada por banca electrónica</strong> en cualquiera de los bancos arriba indicados.</li><li>Para realizar el pago de la otra jornada:<br>Presentar en la Oficina de Servicios Administrativos el comprobante de pago impreso de la primer jornada cancelada, Carné Estudiantil y Tarjeta Electrónica.</li><li>El pago de las otras jornadas se realizará en Servicios Administrativos mediante formulario.</li></ol><h3>Parqueos con Marbete</h3><p>Alumnos que utilizan Marbete de parqueo, deberán realizar el pago y presentarse a Oficina de Servicios Administrativos del <strong>04 al 30 de enero</strong> en horario de:</p><blockquote><p>Lunes a viernes de 08:00 a 13:00 horas y de 14:00 a 20:00 horas.<br>Sábado: de 08:00 a 14:00 horas.</p></blockquote><p>Presentar comprobante de pago impreso, marbete anterior, fotografía reciente y Carné Estudiantíl, el trámite es personal.</p><h3>Solicitud de Parqueo</h3><p>La solicitud es únicamente el <strong>15 y 16 de enero</strong>, a través del formulario de <a href='http://apps.umg.edu.gt/acad/parqueos' target='_blank'>Solicitud de Parqueo en Mi UMG</a>.<br><strong><small>Encontrará datos de usuario y contraseña en boleta de Asignación de cursos.</small></strong></p><p>Antes de realizar la solicitud debe estar inscrito y asignado a cursos en el semestre actual.<br>La Asignación de parqueo está sujeta a disponibilidad de espacios.</p><p>.</p></div>",
         "isActive": true,
         "locations": [
             {
@@ -154,22 +177,26 @@
                 "latitude": "14.658208",
                 "longitude": "-90.512730"
             }
-        ]
+        ], "marker": "SQUARE_ROUNDED",
+        "fillColor": "#606060"
     }, {
         "name": "Ceprod",
-        "icon": "map-icon-bank",
-        "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+        "image": "./img/markers/ceprod.jpeg",
+        "icon": "map-icon-book-store",
+        "description": "Imprime listados oficiales de estudiantes para parciales ordinarios, extraordinarios y de recuperación, toma la foto para carné universitario (lunes a viernes de 08:00am a 01:00pm, 02:00pm a 08:30pm / sábados de 09:00am a 12:00pm)",
         "isActive": true,
         "locations": [
             {
-                "latitude": "14.659099",
-                "longitude": "-90.513999"
+                "latitude": "14.658391",
+                "longitude": "-90.513491"
             }
-        ]
+        ], "marker": "MAP_PIN",
+        "fillColor": "#00CCBB"
     }, {
         "name": "Laboratorios de computación",
-        "icon": "map-icon-bank",
-        "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+        "image": "",
+        "icon": "map-icon-square-rounded",
+        "description": "Lunes a sábado de 07:00am a 01:00pm, 02:00pm a 06:00pm",
         "isActive": true,
         "locations": [
             {
@@ -182,6 +209,7 @@
                 "latitude": "14.657983",
                 "longitude": "-90.513370"
             }
-        ]
+        ], "marker": "MAP_PIN",
+        "fillColor": "#202020"
     }
 ]

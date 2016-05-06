@@ -9,11 +9,12 @@ var placesArr = [],
 var menuArrow = 'left';
 var mapContainer    = document.getElementById('mapContainer');
 var mapOptions      = {
-    zoomControl: false,
-    mapTypeControl: true,
-    scaleControl: false,
-    streetViewControl: false,
-    rotateControl: false,
+    zoomControl:        true,
+    mapTypeControl:     true,
+    scaleControl:       false,
+    streetViewControl:  true,
+    rotateControl:      false,
+    mapTypeId:          google.maps.MapTypeId.SATELLITE,
     center: {
         lat: 14.6586779, lng: -90.5133461
     }, scrollwheel: false,
@@ -25,41 +26,25 @@ var showMarkerInfo = function (element) {
     var umgPlace    = elementName.replace('Información de ', '');
     var title   = document.querySelector('#mapOptions .modal-title');
     var content = document.querySelector('#mapOptions .modal-body');
+    var image   = document.querySelector('#mapOptions .modal-image');
 
-    title.innerHTML     = '';
-    content.innerHTML   = '';
+    title.innerHTML         = '';
+    content.innerHTML       = '';
+    image.children[0].alt   = '';
+    image.children[0].src   = '';
 
     placesArr.some(function (element, index, arr) {
         if (element.name === umgPlace) {
-            title.innerHTML     = elementName;
-            content.innerHTML   = element.description;
+            title.innerHTML         = elementName;
+            content.innerHTML       = element.description;
+            image.children[0].alt   = element.name;
+            image.children[0].src   = element.image;
 
             $('#mapOptions').modal('show');
             return false;
         }
     });
 };
-
-// var options = {
-//   enableHighAccuracy: true,
-//   timeout: 5000,
-//   maximumAge: 0
-// };
-//
-// function success(pos) {
-//   var crd = pos.coords;
-//
-//   console.log('Your current position is:');
-//   console.log('Latitude : ' + crd.latitude);
-//   console.log('Longitude: ' + crd.longitude);
-//   console.log('More or less ' + crd.accuracy + ' meters.');
-// };
-//
-// function error(err) {
-//   console.warn('ERROR(' + err.code + '): ' + err.message);
-// };
-//
-// navigator.geolocation.getCurrentPosition(success, error, options);
 
 function showLocation(position) {
     var latitude = position.coords.latitude;
@@ -102,6 +87,12 @@ var getLocationUpdate = function (map) {
                        strokeColor:      '#000',
                        strokeWeight:     1
                    }, map_icon_label:    '<span class="map-icon map-icon-library"></span>'
+               });
+               var infowindow = new google.maps.InfoWindow({
+                   content: '<h2>Este eres tú</h2>'
+               });
+               myPosition.addListener('click', function() {
+                   infowindow.open(map, myPosition);
                });
                //map.setCenter(pos);
            } else {
@@ -158,9 +149,9 @@ var drawMarkers = function (map, arrObj, umgPlaces) {
                             title:      element.name,
                             icon: {
                                 path: MAP_PIN,
-                                fillColor: '#00CCBB',
+                                fillColor: element.fillColor,
                                 fillOpacity: 1,
-                                strokeColor: '#000',
+                                strokeColor: element.fillColor,
                                 strokeWeight: 1
                             }, map_icon_label: '<span class="map-icon '+ element.icon +'"></span>'
                         });
@@ -198,7 +189,7 @@ var fillMapOptions = function () {
                     +"'><input id='element-"+
                     index
                     +"' type='checkbox' name='umg-places-list' value='"+ element.name +"' /> "+
-                    "<span class='map-icon "+ element.icon +"'></span>" +
+                    "<span class='map-icon "+ element.icon +"'></span> " +
                     element.name
                     +"</label></li>";
                 }
