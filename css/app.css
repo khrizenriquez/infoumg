@@ -118,6 +118,11 @@ body {
     color: white;
 }
 
+#container-map-list-elements {
+    max-height: 420px;
+    overflow-y: scroll;
+}
+
 #mapContainer {
     height: 100%;
     width: 100%;
