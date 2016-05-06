@@ -6,8 +6,14 @@
         "isActive": true,
         "locations": [
             {
-                "latitude": "14.657176",
-                "longitude": "-90.513357"
+                "latitude": "14.656038",
+                "longitude": "-90.513420"
+            }, {
+                "latitude": "14.656233",
+                "longitude": "-90.512970"
+            }, {
+                "latitude": "14.656625",
+                "longitude": "-90.512697"
             }
         ]
     }, {
@@ -28,8 +34,8 @@
         "isActive": true,
         "locations": [
             {
-                "latitude": "14.657000",
-                "longitude": "-90.513100"
+                "latitude": "14.658152",
+                "longitude": "-90.513432"
             }
         ]
     }, {
@@ -45,24 +51,136 @@
         ]
     }, {
         "name": "Edificio A",
-        "icon": "map-icon-store",
+        "icon": "map-icon-city-hall",
         "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
         "isActive": true,
         "locations": [
             {
-                "latitude": "14.657211",
-                "longitude": "-90.513212"
+                "latitude": "14.658278",
+                "longitude": "-90.513453"
+            }
+        ]
+    }, {
+        "name": "Edificio I",
+        "icon": "map-icon-city-hall",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+        "isActive": true,
+        "locations": [
+            {
+                "latitude": "14.658011",
+                "longitude": "-90.513287"
             }
         ]
     }, {
         "name": "Edificio L",
-        "icon": "map-icon-store",
+        "icon": "map-icon-city-hall",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+        "isActive": true,
+        "locations": [
+            {
+                "latitude": "14.657638",
+                "longitude": "-90.512785"
+            }
+        ]
+    }, {
+        "name": "Edificio T",
+        "icon": "map-icon-city-hall",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+        "isActive": true,
+        "locations": [
+            {
+                "latitude": "14.657174",
+                "longitude": "-90.512030"
+            }
+        ]
+    }, {
+        "name": "Cafetería",
+        "icon": "map-icon-restaurant",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+        "isActive": true,
+        "locations": [
+            {
+                "latitude": "14.658361",
+                "longitude": "-90.513267"
+            }, {
+                "latitude": "14.659176",
+                "longitude": "-90.514002"
+            }, {
+                "latitude": "14.656304",
+                "longitude": "-90.513725"
+            }
+        ]
+    }, {
+        "name": "Banco",
+        "icon": "map-icon-bank",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+        "isActive": true,
+        "locations": [
+            {
+                "latitude": "14.658107",
+                "longitude": "-90.513627"
+            }
+        ]
+    }, {
+        "name": "Auditorium",
+        "icon": "map-icon-bank",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+        "isActive": true,
+        "locations": [
+            {
+                "latitude": "14.658564",
+                "longitude": "-90.513211"
+            }
+        ]
+    }, {
+        "name": "Parqueos",
+        "icon": "map-icon-bank",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+        "isActive": true,
+        "locations": [
+            {
+                "latitude": "14.659048",
+                "longitude": "-90.514088"
+            }, {
+                "latitude": "14.658776",
+                "longitude": "-90.514159"
+            }, {
+                "latitude": "14.658313",
+                "longitude": "-90.514295"
+            }, {
+                "latitude": "14.657830",
+                "longitude": "-90.514194"
+            }, {
+                "latitude": "14.658208",
+                "longitude": "-90.512730"
+            }
+        ]
+    }, {
+        "name": "Ceprod",
+        "icon": "map-icon-bank",
         "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
         "isActive": true,
         "locations": [
             {
                 "latitude": "14.659099",
                 "longitude": "-90.513999"
+            }
+        ]
+    }, {
+        "name": "Laboratorios de computación",
+        "icon": "map-icon-bank",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+        "isActive": true,
+        "locations": [
+            {
+                "latitude": "14.658021",
+                "longitude": "-90.513465"
+            }, {
+                "latitude": "14.657939",
+                "longitude": "-90.513151"
+            }, {
+                "latitude": "14.657983",
+                "longitude": "-90.513370"
             }
         ]
     }
