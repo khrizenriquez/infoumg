@@ -1,0 +1,13 @@
+# humanstxt.org/
+# The humans responsible & technology for this project
+
+# DEVELOPER
+
+    Chris Enríquez -- @khrizenriquez
+
+# TECHNOLOGY
+
+    CSS3, HTML5
+    jQuery, Vanilla JS, JSON
+
+    Source: https://infoumg.khrizenriquez.com/
