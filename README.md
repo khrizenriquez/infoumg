@@ -14,8 +14,6 @@ Mapa con ubicaciones de los lugares de campus central de la universidad Mariano 
 
 Autores: 
 
-[Chris Enríquez](https://twitter.com/khrizEnriquez)
-
 [Kevin Morales]()
 
 [Jorge Mejía]()
@@ -27,3 +25,5 @@ Autores:
 [Miguel Canté]()
 
 [Manuel Vega]()
+
+[Chris Enríquez](https://twitter.com/khrizEnriquez)
