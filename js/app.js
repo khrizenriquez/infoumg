@@ -16,7 +16,7 @@ var mapOptions      = {
     rotateControl:      false,
     mapTypeId:          google.maps.MapTypeId.SATELLITE,
     center: {
-        lat: 14.6586779, lng: -90.5133461
+        lat: 14.6576012, lng: -90.5128463
     }, scrollwheel: false,
     zoom: 18
 };
