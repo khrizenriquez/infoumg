@@ -220,7 +220,9 @@ var fillMapOptions = function () {
 };
 
 document.addEventListener('DOMContentLoaded', function () {
-    document.querySelector('.arrow-container').addEventListener('click', function (evt) {
+    var arrowContainer  = document.querySelector('.arrow-container');
+    var centerMe        = document.querySelector('#centerMe');
+    arrowContainer.addEventListener('click', function (evt) {
         var opContainer = document.querySelector('.optionsContainer');
         if (menuArrow == 'left') {
             menuArrow = 'right';
@@ -242,6 +244,10 @@ document.addEventListener('DOMContentLoaded', function () {
 
             return;
         }
+    });
+
+    centerMe.addEventListener('click', function (evt) {
+        map.panTo(mapOptions.center);
     });
 });
 
