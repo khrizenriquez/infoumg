@@ -166,8 +166,21 @@
         ], "marker": "MAP_PIN",
         "fillColor": "#202020"
     }, {
+        "name": "Biblioteca",
+        "image": "./img/markers/biblioteca_central.jpeg",
+        "icon": "map-icon-convenience-store",
+        "description": "<div><div><a href='mailto:biblio@umg.edu.gt'>biblio@umg.edu.gt</a></div><div>Tel.:<a href='tel:24111800'>2411 1800</a> ext. 1114, 1255, 1256, 1259</div><div>Lunes – Viernes: 8:00-21:00, Sábado: 8:00-18:00</div></div>",
+        "isActive": true,
+        "locations": [
+            {
+                "latitude": "14.658536",
+                "longitude": "-90.513293"
+            }
+        ], "marker": "MAP_PIN",
+        "fillColor": "#bdc3c7"
+    }, {
         "name": "Librería",
-        "image": "./img/markers/libreria.jpg",
+        "image": "./img/markers/libreria.jpeg",
         "icon": "map-icon-convenience-store",
         "description": "<div>Tel.: <a href='tel:24111800'>2411 1800</a> ext. 1157 <div>Lunes – Viernes: 9:00-13:00, 17:00-20:00, Sábado: 9:00-14:00</div></div>",
         "isActive": true,
@@ -175,6 +188,19 @@
             {
                 "latitude": "14.658281",
                 "longitude": "-90.513182"
+            }
+        ], "marker": "MAP_PIN",
+        "fillColor": "#bdc3c7"
+    }, {
+        "name": "Facultad Odontología",
+        "image": "./img/markers/facultad_odontologia.jpeg",
+        "icon": "map-icon-convenience-store",
+        "description": "",
+        "isActive": true,
+        "locations": [
+            {
+                "latitude": "14.656329",
+                "longitude": "-90.514046"
             }
         ], "marker": "MAP_PIN",
         "fillColor": "#bdc3c7"
