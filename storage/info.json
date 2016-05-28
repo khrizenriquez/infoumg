@@ -32,10 +32,10 @@
         ], "marker": "MAP_PIN",
         "fillColor": "#3498db"
     }, {
-        "name": "Poes",
+        "name": "Programa de Orientación Estudiantil (P.O.E.S)",
         "image": "./img/markers/poes.jpeg",
         "icon": "map-icon-store",
-        "description": "Oficina que se encarga de realizar las evaluaciones de admisión a la universidad, evaluaciones a personal docente y atención a los diferentes establecimientos educativos de enseñanza media y tour a la universidad, además de dar la información de las carreras de la umg, realiza ferias estudiantiles (lunes a viernes de 08:00am a 08:00pm / sábados de 09:00am a 12:00pm)",
+        "description": "Oficina que se encarga de realizar las evaluaciones de admisión a la universidad, evaluaciones a personal docente y atención a los diferentes establecimientos educativos de enseñanza media y tour a la universidad, además de dar la información de las carreras de la UMG, realiza ferias estudiantiles <div><a href='mailto:poes@umg.edu.gt'>poes@umg.edu.gt</a></div><div>Edicio A, Oficina 310, 3er. Nivel</div><div>Tel.: <a href='tel:24111800'>24111800</a> ext. 1141, 1198, 1199</div><div>Lunes – Viernes: 8:00-20:30</div>",
         "isActive": true,
         "locations": [
             {
@@ -57,6 +57,127 @@
             }
         ], "marker": "MAP_PIN",
         "fillColor": "#27ae60"
+    }, {
+        "name": "Cafetería",
+        "image": "./img/markers/cafeteria.jpeg",
+        "icon": "map-icon-restaurant",
+        "description": "<div>Cafetería central:<ul><li>-La kafe</li><li>-Antojitos</li><li>-Subway</li><li>-Al macarone</li></ul></div><div>Cafetería campus de postgrados</div><div>Cafetería edificio T</div><div>Cafetería anexo medicina</div>",
+        "isActive": true,
+        "locations": [
+            {
+                "latitude": "14.658361",
+                "longitude": "-90.513267"
+            }, {
+                "latitude": "14.659176",
+                "longitude": "-90.514002"
+            }, {
+                "latitude": "14.656304",
+                "longitude": "-90.513725"
+            }
+        ], "marker": "MAP_PIN",
+        "fillColor": "#e67e22"
+    }, {
+        "name": "Banco Industrial",
+        "image": "./img/markers/banco.jpeg",
+        "icon": "map-icon-bank",
+        "description": "<div>Agencia banco industrial <div>Tel.: <a href='24111800'>2411 1800</a> ext. 1159 Call Center <a href='tel:1717'>1717</a></div><div>Lunes – Viernes: 8:30-20:00, Sábado: 8:30-14:00</div></div>",
+        "isActive": true,
+        "locations": [
+            {
+                "latitude": "14.658107",
+                "longitude": "-90.513627"
+            }
+        ], "marker": "MAP_PIN",
+        "fillColor": "#34495e"
+    }, {
+        "name": "Aula magna",
+        "image": "./img/markers/aula_magna.jpeg",
+        "icon": "map-icon-museum",
+        "description": "Se realizan diferentes eventos como graduaciones, conferencias, congresos y diferentes actividades. <div>Tel.: <a href='tel:24111800'>2411 1800</a> ext. 1147</div>",
+        "isActive": true,
+        "locations": [
+            {
+                "latitude": "14.658564",
+                "longitude": "-90.513211"
+            }
+        ], "marker": "MAP_PIN",
+        "fillColor": "#f39c12"
+    }, {
+        "name": "Parqueos",
+        "image": "./img/markers/parqueo.jpeg",
+        "icon": "map-icon-parking",
+        "description": "<div><p><strong>Automóviles y Motocicletas</strong></p><h3>Renovación de Derecho de Parqueo<br>Primer Semestre 2016</h3><p><strong>Aplican: Licenciaturas, Maestrías, Doctorados.</strong></p><p>Podrá renovar derecho de parqueo todo alumno que haya cancelado el semestre anterior y deberá estar debidamente <strong>asignado en el semestre actual</strong>.</p><p>Deberá realizar el pago en línea del <strong>04 al 30 de enero</strong> con los bancos:</p><ul><li>Banco Industrial (BI)</li><li>Banco G&amp;T</li><li>Banco Agricola Mercantil (BAM)</li></ul><p><strong>Imprimir y guardar documento de pago</strong><br><strong>Nota:</strong><br>En caso de no realizar el pago en línea, puede presentarse a nuestras oficinas de Servicios de Servicios Administrativos <strong>se cobrará Q25.00</strong> por la boleta.<strong>Estudiantes asignados en diferentes jornadas</strong></p><ol><li>Realizar el <strong>pago de parqueo de una jornada por banca electrónica</strong> en cualquiera de los bancos arriba indicados.</li><li>Para realizar el pago de la otra jornada:<br>Presentar en la Oficina de Servicios Administrativos el comprobante de pago impreso de la primer jornada cancelada, Carné Estudiantil y Tarjeta Electrónica.</li><li>El pago de las otras jornadas se realizará en Servicios Administrativos mediante formulario.</li></ol><h3>Parqueos con Marbete</h3><p>Alumnos que utilizan Marbete de parqueo, deberán realizar el pago y presentarse a Oficina de Servicios Administrativos del <strong>04 al 30 de enero</strong> en horario de:</p><blockquote><p>Lunes a viernes de 08:00 a 13:00 horas y de 14:00 a 20:00 horas.<br>Sábado: de 08:00 a 14:00 horas.</p></blockquote><p>Presentar comprobante de pago impreso, marbete anterior, fotografía reciente y Carné Estudiantíl, el trámite es personal.</p><h3>Solicitud de Parqueo</h3><p>La solicitud es únicamente el <strong>15 y 16 de enero</strong>, a través del formulario de <a href='http://apps.umg.edu.gt/acad/parqueos' target='_blank'>Solicitud de Parqueo en Mi UMG</a>.<br><strong><small>Encontrará datos de usuario y contraseña en boleta de Asignación de cursos.</small></strong></p><p>Antes de realizar la solicitud debe estar inscrito y asignado a cursos en el semestre actual.<br>La Asignación de parqueo está sujeta a disponibilidad de espacios.</p><p>.</p></div>",
+        "isActive": true,
+        "locations": [
+            {
+                "latitude": "14.659048",
+                "longitude": "-90.514088"
+            }, {
+                "latitude": "14.658776",
+                "longitude": "-90.514159"
+            }, {
+                "latitude": "14.658313",
+                "longitude": "-90.514295"
+            }, {
+                "latitude": "14.657830",
+                "longitude": "-90.514194"
+            }, {
+                "latitude": "14.658208",
+                "longitude": "-90.512730"
+            }, {
+                "latitude": "14.656307",
+                "longitude": "-90.513413"
+            }, {
+                "latitude": "14.656586",
+                "longitude": "-90.513814"
+            }
+        ], "marker": "SQUARE_ROUNDED",
+        "fillColor": "#606060"
+    }, {
+        "name": "C.E.P.R.O.D",
+        "image": "./img/markers/ceprod.jpeg",
+        "icon": "map-icon-book-store",
+        "description": "Imprime listados oficiales de estudiantes para parciales ordinarios, extraordinarios y de recuperación, toma la foto para carné universitario. <div>Edificio “A” 1er. Nivel</div><div>Tel.: <a href='24111800'>2411 1800</a> ext. 1149, 1225, 1229</div>",
+        "isActive": true,
+        "locations": [
+            {
+                "latitude": "14.658391",
+                "longitude": "-90.513491"
+            }
+        ], "marker": "MAP_PIN",
+        "fillColor": "#00CCBB"
+    }, {
+        "name": "Centro de Cómputo Académico “Laboratorios”",
+        "image": "",
+        "icon": "map-icon-square-rounded",
+        "description": "Edificio “I” oficina 200 <div>Tel.: <a href='tel:24111800'>2411 1800</a> ext. 1137</div><div>Lunes – Viernes: 7:00-21:00, Sábado: 7:00-16:00</div>",
+        "isActive": true,
+        "locations": [
+            {
+                "latitude": "14.658021",
+                "longitude": "-90.513465"
+            }, {
+                "latitude": "14.657939",
+                "longitude": "-90.513151"
+            }, {
+                "latitude": "14.657983",
+                "longitude": "-90.513370"
+            }
+        ], "marker": "MAP_PIN",
+        "fillColor": "#202020"
+    }, {
+        "name": "Librería",
+        "image": "./img/markers/libreria.jpg",
+        "icon": "map-icon-convenience-store",
+        "description": "<div>Tel.: <a href='tel:24111800'>2411 1800</a> ext. 1157 <div>Lunes – Viernes: 9:00-13:00, 17:00-20:00, Sábado: 9:00-14:00</div></div>",
+        "isActive": true,
+        "locations": [
+            {
+                "latitude": "14.658281",
+                "longitude": "-90.513182"
+            }
+        ], "marker": "MAP_PIN",
+        "fillColor": "#bdc3c7"
     }, {
         "name": "Edificio A",
         "image": "./img/markers/edificio_a.jpeg",
@@ -109,107 +230,5 @@
             }
         ], "marker": "MAP_PIN",
         "fillColor": "#00CCBB"
-    }, {
-        "name": "Cafetería",
-        "image": "./img/markers/cafeteria.jpeg",
-        "icon": "map-icon-restaurant",
-        "description": "<div>Cafetería central:<ul><li>-La kafe</li><li>-Antojitos</li><li>-Subway</li><li>-Al macarone</li></ul></div><div>Cafetería campus de postgrados</div><div>Cafetería edificio T</div><div>Cafetería anexo medicina</div>",
-        "isActive": true,
-        "locations": [
-            {
-                "latitude": "14.658361",
-                "longitude": "-90.513267"
-            }, {
-                "latitude": "14.659176",
-                "longitude": "-90.514002"
-            }, {
-                "latitude": "14.656304",
-                "longitude": "-90.513725"
-            }
-        ], "marker": "MAP_PIN",
-        "fillColor": "#e67e22"
-    }, {
-        "name": "Banco",
-        "image": "./img/markers/banco.jpeg",
-        "icon": "map-icon-bank",
-        "description": "<div>Agencia banco industrial <strong>(lunes a viernes de 08:00am a 08:00pm / sábados 08:00am a 02:00pm)</strong></div>",
-        "isActive": true,
-        "locations": [
-            {
-                "latitude": "14.658107",
-                "longitude": "-90.513627"
-            }
-        ], "marker": "MAP_PIN",
-        "fillColor": "#34495e"
-    }, {
-        "name": "Aula magna",
-        "image": "./img/markers/aula_magna.jpeg",
-        "icon": "map-icon-museum",
-        "description": "Se realizan diferentes eventos como graduaciones, conferencias, congresos y diferentes actividades.",
-        "isActive": true,
-        "locations": [
-            {
-                "latitude": "14.658564",
-                "longitude": "-90.513211"
-            }
-        ], "marker": "MAP_PIN",
-        "fillColor": "#f39c12"
-    }, {
-        "name": "Parqueos",
-        "image": "./img/markers/parqueo.jpeg",
-        "icon": "map-icon-parking",
-        "description": "<div><p><strong>Automóviles y Motocicletas</strong></p><h3>Renovación de Derecho de Parqueo<br>Primer Semestre 2016</h3><p><strong>Aplican: Licenciaturas, Maestrías, Doctorados.</strong></p><p>Podrá renovar derecho de parqueo todo alumno que haya cancelado el semestre anterior y deberá estar debidamente <strong>asignado en el semestre actual</strong>.</p><p>Deberá realizar el pago en línea del <strong>04 al 30 de enero</strong> con los bancos:</p><ul><li>Banco Industrial (BI)</li><li>Banco G&amp;T</li><li>Banco Agricola Mercantil (BAM)</li></ul><p><strong>Imprimir y guardar documento de pago</strong><br><strong>Nota:</strong><br>En caso de no realizar el pago en línea, puede presentarse a nuestras oficinas de Servicios de Servicios Administrativos <strong>se cobrará Q25.00</strong> por la boleta.<strong>Estudiantes asignados en diferentes jornadas</strong></p><ol><li>Realizar el <strong>pago de parqueo de una jornada por banca electrónica</strong> en cualquiera de los bancos arriba indicados.</li><li>Para realizar el pago de la otra jornada:<br>Presentar en la Oficina de Servicios Administrativos el comprobante de pago impreso de la primer jornada cancelada, Carné Estudiantil y Tarjeta Electrónica.</li><li>El pago de las otras jornadas se realizará en Servicios Administrativos mediante formulario.</li></ol><h3>Parqueos con Marbete</h3><p>Alumnos que utilizan Marbete de parqueo, deberán realizar el pago y presentarse a Oficina de Servicios Administrativos del <strong>04 al 30 de enero</strong> en horario de:</p><blockquote><p>Lunes a viernes de 08:00 a 13:00 horas y de 14:00 a 20:00 horas.<br>Sábado: de 08:00 a 14:00 horas.</p></blockquote><p>Presentar comprobante de pago impreso, marbete anterior, fotografía reciente y Carné Estudiantíl, el trámite es personal.</p><h3>Solicitud de Parqueo</h3><p>La solicitud es únicamente el <strong>15 y 16 de enero</strong>, a través del formulario de <a href='http://apps.umg.edu.gt/acad/parqueos' target='_blank'>Solicitud de Parqueo en Mi UMG</a>.<br><strong><small>Encontrará datos de usuario y contraseña en boleta de Asignación de cursos.</small></strong></p><p>Antes de realizar la solicitud debe estar inscrito y asignado a cursos en el semestre actual.<br>La Asignación de parqueo está sujeta a disponibilidad de espacios.</p><p>.</p></div>",
-        "isActive": true,
-        "locations": [
-            {
-                "latitude": "14.659048",
-                "longitude": "-90.514088"
-            }, {
-                "latitude": "14.658776",
-                "longitude": "-90.514159"
-            }, {
-                "latitude": "14.658313",
-                "longitude": "-90.514295"
-            }, {
-                "latitude": "14.657830",
-                "longitude": "-90.514194"
-            }, {
-                "latitude": "14.658208",
-                "longitude": "-90.512730"
-            }
-        ], "marker": "SQUARE_ROUNDED",
-        "fillColor": "#606060"
-    }, {
-        "name": "Ceprod",
-        "image": "./img/markers/ceprod.jpeg",
-        "icon": "map-icon-book-store",
-        "description": "Imprime listados oficiales de estudiantes para parciales ordinarios, extraordinarios y de recuperación, toma la foto para carné universitario (lunes a viernes de 08:00am a 01:00pm, 02:00pm a 08:30pm / sábados de 09:00am a 12:00pm)",
-        "isActive": true,
-        "locations": [
-            {
-                "latitude": "14.658391",
-                "longitude": "-90.513491"
-            }
-        ], "marker": "MAP_PIN",
-        "fillColor": "#00CCBB"
-    }, {
-        "name": "Laboratorios de computación",
-        "image": "",
-        "icon": "map-icon-square-rounded",
-        "description": "Lunes a sábado de 07:00am a 01:00pm, 02:00pm a 06:00pm",
-        "isActive": true,
-        "locations": [
-            {
-                "latitude": "14.658021",
-                "longitude": "-90.513465"
-            }, {
-                "latitude": "14.657939",
-                "longitude": "-90.513151"
-            }, {
-                "latitude": "14.657983",
-                "longitude": "-90.513370"
-            }
-        ], "marker": "MAP_PIN",
-        "fillColor": "#202020"
     }
 ]
